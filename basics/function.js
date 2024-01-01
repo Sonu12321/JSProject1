@@ -40,4 +40,4 @@ const myarray = [200,300,355,455]
 function calling_array(array){
     console.log(array[1]);
 }
-calling_array(myarray)
+console.log(calling_array(myarray));
