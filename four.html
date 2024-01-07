@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>coffe aur code</title>
+</head>
+<body style="background-color: rgb(30, 23, 23);color: white;">
+    <ul class="language">
+        <li>javascriptt</li>
+    </ul>
+    
+</body>
+<script>
+    function addlanguage(langname){
+        const li=document.createElement('li');
+        li.innerHTML= `${langname}`
+        document.querySelector('.language').appendChild(li)
+    }
+    addlanguage("python")
+    function addoptlanguage(langname){
+       const li = document.createElement('li')
+       li.appendChild(document.createTextNode(langname))
+       document.querySelector('.language').appendChild(li)
+    }
+    addoptlanguage("sibyd")
+    addoptlanguage("sibysdasdad")
+    // ediut the element
+    const y = document.querySelector("li:nth-child(2)")
+    //y.innerHTML="osnu"
+    const newm = document.createElement('li')
+    newm.innerText = "mojo"
+    y.replaceWith(newm)
+    const hi = document.querySelector("li:first-child")
+    hi.outerHTML='<li>typescript</li>'
+    // remove
+    const u = document.querySelector("li:last-child")
+    u.remove()
+</script>
+</html>
