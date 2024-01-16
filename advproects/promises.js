@@ -1,7 +1,7 @@
 const x1 = new Promise(function(resolve,reject){
     setTimeout(function(){
         console.log("heooolosodj");
-        resolve()
+        resolve()//to connect the the object as it is a thenable 
     },1000)
 })
 x1.then(function(){
@@ -25,10 +25,30 @@ const x3 = new Promise(function(resolve,reject){
 x3.then(function(user){
     console.log(user);
 })
-//promsises four 
-const x4 = new Promise((resolve,reject)=>{
+// promsises four 
+// const x4 = new Promise((resolve,reject)=>{
+//     setTimeout(()=>{
+//         let error = false;
+//         if(!error){
+//             resolve({username:"sonnu",email:"lhgaisdfvuj@gmial.com"})
+//         }
+//         else{
+//             reject('find error')
+//         }
+//     },1000)
+// })
+// x4.then((user1)=>{
+//     console.log(user1);
+//     return user1.username
+// }).then((username2)=>{
+//     console.log(username2);
+// }).catch((error)=>{
+//     console.log(error);
+// }).finally((error)=>{console.log("jasfkagfkdbgvkbskfdjk")})
+
+const Promise5 = new Promise((resolve,reject)=>{
     setTimeout(()=>{
-        let error = false;
+        let error = true;
         if(!error){
             resolve({username:"sonnu",email:"lhgaisdfvuj@gmial.com"})
         }
@@ -37,11 +57,16 @@ const x4 = new Promise((resolve,reject)=>{
         }
     },1000)
 })
-x4.then((user1)=>{
-    console.log(user1);
-    return user1.username
-}).then((username2)=>{
-    console.log(username2);
-}).catch((error)=>{
+async function comsumePromiseme(){
+//    const x =  await promise5
+//    console.log(x)
+// }
+// comsumepromise5()
+try {
+    const x =  await promise5
+   console.log(x)
+} catch (error) {
     console.log(error);
-}).finally((error)=>{console.log("jasfkagfkdbgvkbskfdjk")})
+}
+}
+comsumePromiseme()
